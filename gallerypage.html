@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Newsletter Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #ebebfb;
+    opacity: 1;
+    background-image:  https://img.freepik.com/free-vector/diwali-festival-patterned-background_53876-118874.jpg?ga=GA1.2.711732540.1720793543&semt=sph;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:antiquewhite;
+}
+
+.site-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+
+.logo {
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.gallery article {
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.gallery img {
+    width: 480px;
+    height: 300px;
+    display: block;
+}
+
+.gallery p {
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
+<body>
+    <header>
+        <img src="data:image/png;base64,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" alt="Logo" class="logo">
+        <h1 class="site-title">The City Times</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">• Home</a></li>
+                <li><a href="gallerypage.html">• Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/450425705_18446019574040259_1080358219007827056_n.jpg?w=414" alt="News 1">
+                <p>Anant Ambani and Radhika Merchant Wedding LIVE Updates: 'Calm Down' singer Rema arrives in Mumbai for the gala event
+                The much-anticipated wedding of Anant Ambani and Radhika Merchant is finally here! 
+            </p>
+            </article>
+            <article>
+                <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2024/7/2024_7$mediumimg_1628951776.webp" alt="News 2">
+                <p>Just about 10 days after the new laws came into force, the Punjab and Haryana High Court has clarified that fresh cases and applications can still be filed under the repealed laws.</p>
+            </article>
+            <article>
+                <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2024/7/2024_7$largeimg_675275884.webp" alt="News 3">
+                <p>The corporation had sent a proposal to the Urban Local Bodies Department seeking waiver of the garbage collection charges levied on households. The proposal has been accepted and processed by the department. As such, the charges implemented in April last year have been waived. The same will now be borne by the local body itself.</p>
+            </article>
+            <article>
+                <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2024/7/2024_7$largeimg_1911637349.webp" alt="News 4">
+                <p>Fed up with dirty roads, piles of garbage in their wards and choked sewage lines, six councillors of the Mohali MC staged a protest outside Mayor Amarjit Singh Sidhu’s office this morning. They waited for three hours, but the Mayor did not come to the office. </p>
+            </article>
+            <article>
+                <img src="https://englishtribuneimages.blob.core.windows.net/gallary-content/2024/7/2024_7$largeimg_1963048281.webp" alt="News 5">
+                <p>A Chandigarh court has rejected an untraced report filed by the Chandigarh Police in a cheating case registered against former IPS woman officer of Punjab and some others six years back. </p>
+            </article>
+            <article>
+                <img src="https://www.livemint.com/lm-img/img/2024/07/12/600x338/ANI-20240702192-0_1720533370467_1720768937524.jpg" alt="News 6">
+                <p>India Wins T20 World Cup 2024, South Africa Runners-Up: Check Prize Money For Winners, Runners-Up, And Semi-Finalists</p>
+            </article>
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/stubble-burning.jpg?w=640" alt="News 7">
+                <p>The Punjab government will provide over 22,000 Crop Residue Management (CRM) machines on subsidy to manage paddy straw scientifically in the state, Punjab Agriculture and Farmers’ Welfare Minister Gurmeet Singh Khudian said Thursday.</p>
+            </article>
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/Haryana-Speaker.jpg?w=640" alt="News 8">
+                <p>Haryana Speaker Gian Chand Gupta on Thursday expressed his strong displeasure against the decision of the town and country planning department to lift the ban on stilt-plus-four-storey buildings in residential areas in the state.</p>
+            </article>
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/drugs_c01631.jpg?w=640" alt="News 9">
+                <p>As menace of pharmaceutical drugs grows in Punjab, 455 licences of retail chemists, wholesalers suspended
+                </p>
+            </article>
+            <article>
+                <img src="https://static.toiimg.com/thumb/msid-111662023,imgsize-87064,width-400,resizemode-4/111662023.jpg" alt="News 10">
+                <p>Euro 2024: England one game away from winning a trophy with absurd total non-football</p>
+            </article>
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/droneteam-4col.jpg?w=640" alt="News 10">
+                <p>Drone with 25-kg payload tested at world’s highest pass
+                </p>
+            </article>
+            <article>
+                <img src="https://images.indianexpress.com/2024/07/police-file-pic-3.jpeg?w=640" alt="News 10">
+                <p>Firing outside Ludhiana house: Absconding gangster Newton, aides booked after CCTV visual goes viral.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+<footer>
+    <p>Email us at: <a href="mailto:info@newsletter.com">thecitytimes@gamil.com</a></p>
+    <p>or Call us at: <a href="+1234567890">+1234567890</a></p>
+</footer>
+</html>
